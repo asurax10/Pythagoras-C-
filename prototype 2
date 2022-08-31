@@ -1,0 +1,39 @@
+#include <iostream>
+#include<cmath>
+#include <functional> 
+using namespace std;
+
+
+
+int main(){
+
+double num1, num2;
+char op1, op2;
+std::cout<<"enter your first option a or b or c: ";
+std::cin>>op1;
+std::cout<<"enter the value of "<<op1<< ": ";
+std::cin>>num1;
+std::cout<<"enter your second option a or b or c: ";
+std::cin>>op2;
+std::cout<<"enter the value of " <<op2<<": ";
+std::cin>>num2;
+
+double result;
+if(op1 == 'a' && op2 == 'b'){
+ result = sqrt((pow(num1, 2)) + (pow(num2, 2)));
+}else if(op1 == 'b' && op2 == 'a'){
+ result = sqrt((pow(num1, 2)) + (pow(num2, 2)));
+}else if(op1 == 'a' && op2 == 'c'){
+ result = sqrt((pow(num2, 2)) - (pow(num1, 2)));
+}else if(op1 == 'c' && op2 == 'a'){
+ result = sqrt((pow(num1, 2)) - (pow(num2, 2)));
+}else if(op1 == 'b' && op2 == 'c'){
+ result = sqrt((pow(num2, 2)) - (pow(num1, 2)));
+}else if(op1 == 'c' && op2 == 'b'){ 
+ result = sqrt((pow(num1, 2)) - (pow(num2, 2)));
+}else{
+    std::cout<<"Syntax Error";
+}
+ std::cout<< result;
+ return 0;
+}
